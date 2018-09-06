@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/* リセットCSS ----------------------------------------------*/
+
+html,
+body,
+h1,
+div {
+  padding: 0;
+  margin: 0;
+}
+
+/* レイアウト -------------------------------------^---------*/
+
+body {
+  position: relative;
+  background: #fafafa;
+}
+
+#container {
+  overflow: hidden;
+}
+
+.top {
+  width: 50%;
+  height: 50vh;
+  overflow: hidden;
+  float: left;
+}
+
+.bottom {
+  width: calc(100% / 3);
+  height: 50vh;
+  overflow: hidden;
+  float: left;
+}
+
+.tl {
+  background: url(../img/cat_01.jpg) center / cover no-repeat;
+}
+
+.tr {
+  background: url(../img/cat_02.jpg) center / cover no-repeat;
+}
+
+.bl {
+  background: url(../img/cat_03.jpg) center / cover no-repeat;
+}
+
+.bc {
+  background: url(../img/cat_04.jpg) center / cover no-repeat;
+}
+
+.br {
+  background: url(../img/cat_05.jpg) center / cover no-repeat;
+}
+
+
+/* ホバー時の挙動 --------------------------------------------*/
+
+.inner {
+  width: 100%;
+  height: 100%;
+}
+
+.tl:hover .inner,
+.tr:hover .inner,
+.bl:hover .inner,
+.bc:hover .inner,
+.br:hover .inner {
+  background: rgba(255, 73, 76, .5);
+}
+
+
+/* ロゴのアニメーション ---------------------------------------*/
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-dasharray: 570;
+  stroke-dashoffset: 570;
+  animation: svg_logo 3s .5s forwards;
+}
+
+@keyframes svg_logo {
+  0% {
+    stroke-dashoffset: 560;
+    fill: #eee;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: #eee;
+  }
+  
+  60% {
+    stroke-dashoffset: 0;
+    fill: #eee;
+  }
+  
+  100% {
+    stroke-dashoffset: 0;
+    fill: #000;
+  }
+}
+
+
+/* ローダー用の記述 -------------------------------------------*/
+
+#loader-bg {
+  background: #222;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 999;
+  display: none;
+}
+
+/* 画面幅767px以下での表示 ------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  h1 {
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
+  .top,
+  .bottom {
+    width: 100%;
+    height: 320px;
+    float: none;
+  }
+}

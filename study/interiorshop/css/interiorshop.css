@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+/* リセットCSS -------------------- */
+html, body, div, h1, h2, p, header, nav, main, footer, aside, ul, li {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* レイアウト -------------------- */
+
+body {
+  background: #F0EDE7;
+}
+
+#container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ヘッダー -------------------- */
+header {
+  background: #E4DFD6;  
+}
+
+header h1 {
+  max-width: 400px;
+  margin: auto;
+  padding: 32px 0;
+}
+
+header img {
+  width: 100%;
+}
+
+/* ナビゲーション -------------------- */
+#nav_wrap {
+  height: 56px;
+}
+nav {
+  background: #F0EDE7;
+  width: 100%;
+  height: 56px;
+}
+
+nav ul {
+  overflow: hidden;
+  width: 768px;
+  margin: auto;
+}
+
+nav li {
+  height: 56px;
+  width: 128px;
+  line-height: 56px;
+  float: left;
+}
+
+nav a {
+  display: block;
+  color: #111;
+  text-align: center;
+  font-size: 14px;
+  transition: .4s;
+}
+
+nav li:hover a {
+  color: #fff;
+  background: #999;
+}
+
+/* #top -------------------- */
+
+#top {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+#top div:nth-child(1) {
+  background: #EADEDB url(../img/a.jpg) center / cover no-repeat;
+  order: 0;
+}
+
+#top div:nth-child(2) {
+  background: #EADEDB;
+  order: 1;
+}
+
+#top div:nth-child(3) {
+  background: #B3A0A6 url(../img/b.jpg) center / cover no-repeat;
+  order: 3;
+}
+
+#top div:nth-child(4) {
+  background: #B3A0A6;
+  order: 2;
+}
+
+#top div:nth-child(5) {
+  background: #C1B4AB url(../img/c.jpg) center / cover no-repeat;
+  order: 5;
+}
+
+#top div:nth-child(6) {
+  background: #C1B4AB;
+  order: 6;
+}
+
+#top div {
+  height: 600px;
+  margin-bottom: 10px;
+}
+
+#top .txt {
+  width: calc((100% - 10px) / 3);
+}
+
+#top .pic {
+  width: calc(((100% - 10px) / 3) * 2);
+}
+
+/* #middle -------------------- */
+#middle {
+  height: 600px;
+  background: #C5BCB5;
+  margin-bottom: 10px;
+}
+
+/* #bottom -------------------- */
+#bottom {
+  display: flex;
+  height: 600px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+#bottom > div {
+  background: #E4DFD6;
+  width: calc((100% - 20px) / 3);
+}
+
+#bottom .pic {
+  height: 220px;
+}
+
+#bottom .txt {
+  height: 380px;
+}
+
+#bottom div:nth-child(1) .pic {
+  background: url(../img/d.jpg) center / cover no-repeat;
+}
+
+#bottom div:nth-child(2) .pic {
+  background: url(../img/e.jpg) center / cover no-repeat;
+}
+
+#bottom div:nth-child(3) .pic {
+  background: url(../img/f.jpg) center / cover no-repeat;
+}
+
+/* フッター ---------------------------------------- */
+
+footer {
+  height: 400px;
+  background: #BED5DB;
+  margin-bottom: 10px;
+}
+
+/* スクロールでナビゲーションが追従 -------------------- */
+
+.fixed {
+  position: fixed;
+  top: 0;
+}
+
+/* 画面幅767以下でのレイアウト ------------------------ */
+@media screen and (max-width: 767px) {
+  #container {
+    width: 100%;
+  }
+  
+  #nav_wrap {
+    height: 112px;
+  }
+  
+  nav {
+    width: 100%;
+    height: 112px;
+  }
+  
+  nav ul {
+    width: 100%;
+  }
+  
+  nav li {
+    width: calc(100% / 3);
+  }
+  
+  #top {
+    display: block;
+  }
+  
+  #top .pic, #top .txt {
+    width: 100%;
+  }
+  
+  #top .pic {
+    height: 250px;
+    margin-bottom: 0px;
+  }
+  
+  #top .txt {
+    height: 450px;
+  }
+  
+  #bottom {
+    display: block;
+    height: auto;
+  }
+  
+  #bottom > div {
+    width: 100%;
+  }
+  
+  #bottom .txt {
+    margin-bottom: 10px;
+  }
+}

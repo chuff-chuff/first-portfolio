@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>NY's portfolio</title>
+  <meta name="description" content="NYのポートフォリオサイトです。習作として制作したサイトを掲載しています。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#bdc3c7">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-96132949-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body id="study" class="sub">
+
+  <div id="container">
+
+    <header>
+      <h1><a href="./">study</a></h1>
+      <p><span><i class="fa fa-truck" aria-hidden="true"></i> レスポンシブウェブデザインやお問い合わせフォーム、<br>jQueryを利用して実装したアニメーションやUIのあるサイトなどを掲載しています。</span></p>
+    </header>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="../">home</a></li>
+        <li><a href="../clientwork/">client work</a></li>
+        <li><a href="../banner/">banner</a></li>
+        <li><a href="./">study</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <div class="content">
+        <p class="figure">
+          <a href="fitness/"><img class="figure_size" src="../img/fitness.png" alt="jQueryアニメーション"></a>
+        </p>
+        <p>画像を大きく使用したヒーローヘッダーやページ追従のナビゲーション、スムーススクロールを実装したページトップボタンやページ内リンクなどを設定した架空のフィットネスクラブのサイトです。</p>
+      </div>
+
+      <div class="content">
+        <p class="figure">
+          <a href="fullscreen/"><img class="figure_size" src="../img/fullscreen.png" alt="フルスクリーンレイアウト"></a>
+        </p>
+        <p>レスポンシブで制作した、フルスクリーンレイアウトのサイトです。ローダーとしてロゴがアニメーションで表示し、jQueryを使用したカーテンをを開けるような演出があります。</p>
+      </div>
+
+      <div class="content">
+        <p class="figure">
+          <a href="interiorshop/"><img class="figure_size" src="../img/interiorshop.png" alt="インテリアショップ"></a>
+        </p>
+        <p>flexboxレイアウトを使用して制作したレスポンシブ対応のサイトです。jQueryを導入してスクロールの際にナビゲーションが追従するように制作しました。</p>
+      </div>
+
+      <div class="content">
+        <p class="figure">
+          <a href="12angrymen/"><img class="figure_size" src="../img/12angrymen.png" alt="background-attachment"></a>
+        </p>
+        <p>background-attachmentプロパティを利用して、コンテンツがカーテンの下でスクロールするようなエフェクトを実装ししました。「12人の怒れる男」という映画を紹介するサイトという体裁です。</p>
+      </div>
+
+      <div class="content">
+        <p class="figure">
+          <a href="form/"><img class="figure_size" src="../img/form.png" alt="問い合わせフォーム"></a>
+        </p>
+        <p>実際に動作する、PHPで制作した問い合わせフォームです。このサイトは常時SSL化してあり、最低限のセキュリティ対策も施してあります。</p>
+      </div>
+
+      <div class="content">
+        <p class="figure">
+          <a href="tabpanel/"><img class="figure_size" src="../img/tabpanel.png" alt="jQueryタブパネル"></a>
+        </p>
+        <p>タブパネルをjQueryを使用して実装しました。</p>
+      </div>
+
+      <div class="content">
+        <p class="figure">
+          <a href="css_sprite/"><img class="figure_size" src="../img/css_sprite.png" alt="CSSスプライト"></a>
+        </p>
+        <p>ナビゲーションメニューをCSSスプライトで作成しました。</p>
+      </div>
+
+    </main>
+
+    <footer>
+      <p><small>© 
+        <script type="text/javascript">document.write(new Date().getFullYear());</script>
+        NY's portfolio</small></p>
+    </footer>
+
+  </div>
+  <!-- /#container -->
+
+  <a href="#nav" id="hamburger">
+    <span></span>
+  </a>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="../js/jquery-3.2.1.min.js"><\/script>');
+  </script>
+  <script src="../js/script.js"></script>
+
+</body>
+
+</html>

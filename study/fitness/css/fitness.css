@@ -1,0 +1,756 @@
+@charset "utf-8";
+
+/* リセットcss ---------------------------------------- */
+
+html,
+body,
+header,
+nav,
+section,
+footer,
+h1,
+h2,
+h3,
+h4,
+div,
+p,
+ul,
+li,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+
+/* レイアウト ------------------------------------------ */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.btn {
+  width: 144px;
+  margin: auto;
+  background: #F92B2F;
+  line-height: 2;
+  border-radius: 4px;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn a {
+  display: block;
+  border-radius: 4px;
+  transition: .4s;
+  text-align: center;
+}
+
+.btn a:hover {
+  color: #222;
+  background: orange;
+}
+
+.red {
+  color: #f00;
+}
+
+
+/* ヘッダー ------------------------------------------- */
+
+header {
+  min-height: 100vh;
+  background: url(../img/training_header.jpg) center / cover no-repeat fixed;
+  color: #fefefe;
+  transition: .4s;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+}
+
+header .topmenu {
+  padding-top: 30px;
+  transition: .4s;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+header .container.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  padding-top: 0;
+}
+
+h1 {
+  background: url(../img/logo.png) left no-repeat;
+  padding-left: 48px;
+}
+
+nav {
+  width: 50%;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  width: 25%;
+}
+
+nav a {
+  line-height: 48px;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+h2,
+header p {
+  /* h2への指定はここですべて済ませる */
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 48px;
+  padding-top: 170px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:960px) {
+  header .container {
+    display: block;
+  }
+  header nav {
+    width: 100%;
+  }
+  header nav li {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:640px) {
+  header .topmenu {
+    padding-top: 5px;
+  }
+  header h1 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 48px;
+  }
+  header nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header ul {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  header li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:520px) {
+  header h1 {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width:379px) {
+  header h1 {
+    font-size: 4.4vw;
+  }
+}
+
+/* スクロール時にナビゲーションを固定する ------------------------------------------- */
+
+.topmenu_wrapper {
+  height: 78px;
+}
+
+.topmenu.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #222;
+  padding: 5px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+
+/* .welcome .coaches .voice 共通 ------------------------------------------- */
+
+.welcome,
+.coaches,
+.voice {
+  box-sizing: border-box;
+  padding: 100px 0;
+}
+
+
+/* section class="welcome" ------------------------------------------- */
+
+.welcome {
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.welcome > p {
+  text-align: center;
+  margin-bottom: 70px;
+  padding: 0 16px
+}
+
+.welcome .container {
+  display: flex;
+  margin-bottom: 100px;
+  justify-content: space-between;
+}
+
+.welcome .container>div {
+  max-width: 30%;
+}
+
+.welcome .fa {
+  display: block;
+  color: #fefefe;
+  background: #444;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  margin: 0 auto 32px;
+}
+
+.welcome h3 {
+  color: #f00;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+@media screen and (max-width:1100px) {
+  .welcome .container {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .welcome {
+    padding: 50px 0;
+  }
+  .welcome .container {
+    display: block;
+  }
+  .welcome .container>div {
+    max-width: 640px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    margin: auto;
+    text-align: center;
+  }
+  .welcome .container>div:not(:last-child) {
+    margin-bottom: 32px
+  }
+  .welcome .fa {
+    width: 96px;
+    height: 96px;
+    line-height: 96px;
+    font-size: 42px;
+    margin: 0 auto 16px;
+  }
+  .welcome h3 {
+    margin-bottom: 16px;
+  }
+}
+
+/* ul class="cource" ------------------------------------------- */
+
+.cource {
+  display: flex;
+  height: 300px;
+}
+
+.cource li {
+  width: 25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.cource .inner {
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: .4s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.cource .title {
+  color: #fefefe;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 4px 4px 4px #222;
+  transition: .4s;
+  position: relative;
+  padding-top: 164px;
+}
+
+.cource .btn {
+  transition: .4s;
+  position: relative;
+}
+
+.cource li:nth-child(1) {
+  background: url(../img/gym.jpg) center/cover no-repeat;
+}
+
+.cource li:nth-child(2) {
+  background: url(../img/run.jpg) center/cover no-repeat;
+}
+
+.cource li:nth-child(3) {
+  background: url(../img/swim.jpg) center/cover no-repeat;
+}
+
+.cource li:nth-child(4) {
+  background: url(../img/yoga.jpg) center/cover no-repeat;
+}
+
+@media screen and (min-width:769px) {
+  .cource .title {
+    padding-top: 228px;
+  }
+  .cource li:hover .title {
+    padding-top: 164px;
+  }
+  .cource li:hover .inner {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .cource {
+    flex-wrap: wrap;
+    height: 600px;
+  }
+  .cource li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .cource {
+    height: auto;
+    display: block;
+  }
+  .cource li {
+    width: 100%;
+    height: 240px;
+  }
+  .cource .title {
+    padding-top: 116px;
+  }
+}
+/* section class="coaches" ------------------------------------------- */
+
+.coaches .container {
+  display: flex;
+  padding: 0 1%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.coaches .container>div {
+  width: 23%;
+}
+
+.coaches .container > div > div {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.coaches .photo {
+  width: 100%;
+  transition: .4s;
+}
+
+.coaches h3 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.coaches h3 span {
+  color: #f00;
+  font-weight: normal;
+}
+
+.coaches .sns {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+}
+
+.coaches .sns img {
+  width: 48px;
+}
+
+.coaches .fb,
+.coaches .tw {
+  margin-right: 8px;
+  transition: .2s;
+}
+
+.coaches .fb:hover,
+.coaches .tw:hover {
+  filter: grayscale(100%);
+}
+
+@media screen and (max-width:960px) {
+  .coaches .container {
+    flex-wrap: wrap;
+    justify-content: space-around
+  }
+  .coaches .container>div {
+    width: 40%;
+    margin-bottom: 32px;
+  }
+  .coaches h3 {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .coaches .container {
+    display: block;
+  }
+  .coaches .container>div {
+    width: 100%;
+  }
+}
+
+/* コーチの画像にホバーでSNSボタンを表示 ---------------------- */
+
+@media screen and (min-width:961px) {
+  .coaches .container>div>div {
+    overflow: hidden;
+  }
+  .coaches .sns {
+    width: 100%;
+    text-align: center;
+    bottom: -48px;
+    opacity: 0;
+    transition: .2s;
+  }
+  .coaches .tw {
+    margin-right: 0;
+  }
+  .coaches .container>div>div:hover>img {
+    opacity: .7;
+  }
+  .coaches .container>div>div:hover .sns {
+    opacity: 1;
+    transform: translateY(-64px);
+  }
+}
+/* section class="voice" ------------------------------------------- */
+
+.voice {
+  background: #f4f4f4;
+}
+
+.voice .container {
+  display: flex;
+  padding: 0 1%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.voice .container>div {
+  display: flex;
+  width: 30%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center
+}
+
+.voice .container>div p:nth-of-type(2) {
+  order: 0;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.voice .container>div p:nth-of-type(1) {
+  order: 1;
+  width: 30%;
+}
+
+.voice .container>div p img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.voice .container>div div {
+  order: 2;
+  width: 60%;
+}
+
+.voice h3 {
+  font-size: 16px;
+}
+
+.voice time {
+  color: #777;
+}
+
+@media screen and (max-width:600px) {
+  .voice {
+    padding: 50px 0;
+  }
+  .voice .container {
+    display: block;
+  }
+  .voice .container div {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .voice .container>div p:nth-of-type(2) {
+    margin-bottom: 8px;
+  }
+}
+
+/* フッター ------------------------------------------- */
+
+footer {
+  color: #fefefe;
+  background: #222;
+}
+
+footer .container:first-child {/* フッターのコンテンツボックス */
+  display: flex;
+  padding: 100px 1% 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+footer .container:last-child {/* フッターのコピーライト表記 */
+  padding: 0 1% 8px;
+  box-sizing: border-box;
+}
+
+footer .container:first-child > div {
+  width: 23%;
+}
+
+footer h3 {
+  margin-bottom: 16px;
+}
+
+footer .about h4, footer .about p {
+  margin-bottom: 8px;
+}
+
+footer .about .fa {
+  font-size: 40px;
+  margin-right: 4px;
+}
+
+footer .contact div {
+  display: flex;
+  align-items: center;
+}
+
+footer .contact > p, footer .contact div {
+  margin-bottom: 8px;
+}
+
+footer .contact .fa {
+  font-size: 32px;
+  margin-right: 8px;
+}
+
+footer dt, footer dd {
+  margin-bottom: 8px;
+}
+
+footer dt {
+  float: left;
+  clear: left;
+  margin-right: 8px;
+}
+
+footer .recent dt {
+  background: #FF8C00;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 930px) {
+  footer .container:first-child {
+    /* フッターのコンテンツボックス */
+    padding: 50px 0 50px 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  footer .container:last-child {/* フッターのコピーライト表記 */
+  text-align: center;
+}
+  footer .container:first-child>div {
+    width: 45%;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  footer .container:first-child {
+    /* フッターのコンテンツボックス */
+    padding: 50px;
+    display: block;
+  }
+  footer .container:first-child>div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer .container:first-child {
+    /* フッターのコンテンツボックス */
+    padding: 50px 16px;
+  }
+}
+/* ハンバーガーメニュー ------------------------------------------- */
+
+#ham {
+  width: 44px;
+  height: 44px;
+  background: #d00;
+  position: fixed;
+  top: 4px;
+  left: 8px;
+  z-index: 99;
+  display: none;
+}
+
+#ham span {
+  width: 34px;
+  height: 3px;
+  background: #fefefe;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: .2s;
+}
+
+#ham span::before {
+  display: block;
+  content: "";
+  width: 34px;
+  height: 3px;
+  background: #fefefe;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: -8px;
+  transition: .2s;
+}
+
+#ham span::after {
+  display: block;
+  content: "";
+  width: 34px;
+  height: 3px;
+  background: #fefefe;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 8px;
+  transition: .2s;
+}
+
+#ham .open {
+  background: transparent;
+}
+
+#ham .open::before {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+#ham .open::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width:640px) {
+  #ham {
+    display: block;
+  }
+}
+
+/* TOPボタン ------------------------------------------- */
+
+#page_top {
+  background: #d00;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 8px;
+  text-align: center;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  transition: .4s;
+  display: none;
+}
+
+#page_top a {
+  display: block;
+}
+
+#page_top:hover {
+  border-radius: 50%;
+}

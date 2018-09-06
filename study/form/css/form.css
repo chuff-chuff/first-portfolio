@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body {
+  background: url(../../../img/Sports.png);
+}
+
+#container {
+  padding-top: 64px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+th,
+td,
+input,
+textarea,
+button {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 4px 12px;
+  border: 2px solid #1abc9c;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+th {
+  background: #b7ffb7;
+  text-align: left;
+  width: 10em;
+}
+
+td {
+  width: 16em;
+  background: #fefefe;
+}
+
+button {
+  background: #b7ffb7;
+  border: none;
+  margin: 16px 16px 0 0;
+  text-align: center;
+  width: 108px;
+  border-radius: 16px;
+  padding: 4px;
+  border: 2px solid #1abc9c;
+  box-sizing: border-box;
+}
+
+button:hover {
+  opacity: .7;
+}
+
+button:active {
+  color: #fff;
+}
+
+.error::-webkit-input-placeholder {
+  color: #f00;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 0;
+}

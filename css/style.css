@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+/* リセットCSS --------------------------- */
+
+html,
+body,
+h1,
+h2,
+div,
+p,
+header,
+nav,
+main,
+aside,
+article,
+footer,
+ul,
+li,
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* レイアウト ----------------------------- */
+
+body {
+  background: url(../img/Sports.png);
+}
+
+#container {
+  max-width: 960px;
+  margin: 32px auto 0;
+}
+
+::selection {
+  color: #fefefe;
+  background: #16a085;
+}
+
+::-moz-selection {
+  color: #fefefe;
+  background: #16a085;
+}
+
+/* ヘッダー header ------------------------------- */
+
+header {
+  margin-bottom: 64px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Nico Moji";
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+h1 a {
+  color: #333;
+}
+
+header p {
+  text-align: center;
+}
+
+header p span {
+  background: linear-gradient(transparent 50%, #eee 0%);
+}
+
+header p span mark {
+  background-color: transparent;
+}
+
+/* コンテンツ main ------------------------------- */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.box {
+  width: 160px;
+  margin-bottom: 48px;
+  animation: fadeIn 1s;
+}
+
+.square {
+  background: rgba(22, 160, 133, .5);
+  height: 160px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+  border-radius: 8px;
+}
+
+.square:hover {
+  transform: translateY(-24px);
+}
+
+.square:hover h2 {
+  color: #fefefe;
+}
+
+h2 {
+  color: #333;
+  font-family: "Nico Moji";
+  text-align: center;
+  transition: .4s
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* プロフィール aside ------------------------------------- */
+
+aside {
+  margin-bottom: 24px;
+}
+
+aside h2 {
+  margin-bottom: 8px;
+}
+
+aside .profile_photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+aside p {
+  text-align: center;
+}
+
+aside small {
+  color: #333;
+}
+
+aside a {
+  color: #16a085;
+  text-decoration: underline;
+}
+
+/* フッター footer --------------------------------------- */
+
+footer {
+  color: #666;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+/* 下層ページ 共通 ---------------------------------------- */
+
+.sub header {
+  margin-bottom: 24px;
+}
+
+.sub header h1 {
+  margin-bottom: 8px;
+}
+
+
+/* 下層ページ  ナビゲーション ------------------------------- */
+
+nav {
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+nav ul {
+  display: flex;
+  background: rgba(22, 160, 133, .3);
+  border-radius: 8px;
+}
+
+nav li {
+  width: 25%;
+  height: 48px;
+  line-height: 48px;
+  font-family: "Nico Moji";
+  text-align: center;
+  font-size: 24px;
+  transition: .4s;
+  border-radius: 8px;
+}
+
+nav a {
+  display: block;
+  color: #333;
+  transition: .4s;
+}
+
+nav li:hover {
+  background: rgba(22, 160, 133, .5);
+  border-radius: 8px;
+}
+
+nav li:hover a {
+  color: #fefefe;
+}
+
+/* 下層ページ コンテンツ ----------------------------------- */
+
+.sub main {
+  background: rgba(22, 160, 133, .3);
+  border-radius: 8px;
+  padding: 64px 48px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.sub .content {
+  margin-bottom: 32px;
+  width: 300px;
+}
+
+.sub .figure {
+  margin-bottom: 16px;
+  transition: .4s;
+}
+
+.sub .figure:hover {
+  box-shadow: 4px 6px 6px #666, -4px 6px 6px #666;
+  transform: translateY(-4px);
+}
+
+.sub .figure_size {
+  width: 300px;
+  height: auto;
+}
+
+#sub main p {
+  text-align: justify;
+}
+
+/* ハンバーガーメニュー ------------------------------------ */
+
+#hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 787px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 0 0 8px 8px;
+  }
+  nav ul {
+    display: block;
+    border-radius: 0 0 8px 8px;
+  }
+  nav li {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+  }
+  nav a {
+    text-align: center;
+  }
+  #hamburger {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: rgba(22, 160, 133, .1);
+    border: 2px solid rgba(22, 160, 133, 1);
+    box-sizing: border-box;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border-radius: 4px;
+  }
+  #hamburger span {
+    /* ハンバーガーメニューの上の線 */
+    width: 32px;
+    height: 4px;
+    background: rgba(22, 160, 133, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: translateY(-10px);
+    transition: .4s;
+  }
+  #hamburger span::before {
+    /* ハンバーガーメニューの中央の線 */
+    display: block;
+    content: "";
+    width: 32px;
+    height: 4px;
+    background: rgba(22, 160, 133, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: translateY(10px);
+    transition: .4s;
+  }
+  #hamburger span::after {
+    /* ハンバーガーメニューの下の線 */
+    display: block;
+    content: "";
+    width: 32px;
+    height: 4px;
+    background: rgba(22, 160, 133, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: translateY(20px);
+    transition: .4s;
+  }
+  #hamburger .click {
+    transform: rotate(45deg);
+  }
+  #hamburger .click::before {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  #hamburger .click::after {
+    transform: translateY(10px);
+    transform: rotate(90deg);
+  }
+}
+
+/* 下層ページ クライアントワーク client work ------------ */
+
+#clientwork h2 {
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  margin-bottom: 16px;
+}
+
+#clientwork main {
+  padding-top: 32px;
+}
+
+#clientwork .content {
+  width: 100%;
+}
+
+.view {
+  display: flex;
+  margin-bottom: 32px;
+  align-items: flex-end;
+}
+
+.pc_photo {
+  width: 70%;
+}
+
+.pc_view {
+  width: 100%;
+  transition: .4s;
+}
+
+.sp_photo {
+  width: 30%;
+}
+
+.sp_view {
+  width: 50%;
+  transition: .4s;
+}
+
+.pc_view a,
+.pc_view a {
+  display: block;
+}
+
+.pc_view:hover,
+.sp_view:hover {
+  opacity: .8;
+}
+
+#clientwork dl {}
+
+
+#clientwork dt,
+#clientwork dd {
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+#clientwork dt {
+  float: left;
+  clear: left;
+  background: #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+#clientwork dd {
+  text-align: left;
+  padding-left: 128px;
+}
+
+@media screen and (max-width: 787px) {
+  #clientwork dd {
+    padding-left: 0;
+    clear: left
+  }
+}
+
+/* 下層ページ バナー banner --------------------------- */
+
+/* 下層ページ 習作 study ------------------------------ */
+
+/* Custom 404 page ------------------------------ */
+
+#err_404 h2 span {
+  background: linear-gradient(transparent 50%, #eee 0%);
+}
+
+#err_404 h2 {
+  margin-bottom: 36px;
+}
+
+#err_404 a {
+  display: block;
+  width: 192px;
+  margin: 0 auto 32px;
+  border-radius: 8px;
+}
+
+#err_404 a h2 {
+  width: 192px;
+  line-height: 2;
+  background: rgba(22, 160, 133, .5);
+  border-radius: 8px;
+}
+
+#err_404 a h2:hover {
+  color: #fefefe;
+  background: rgba(22, 160, 133, .7);
+}

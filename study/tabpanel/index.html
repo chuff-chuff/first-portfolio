@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery タブパネル</title>
+  <style>
+    html,
+    body,
+    h1,
+    div,
+    p,
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+      line-height: 1.0;
+      font-family: "Hiragino Kaku Gothic ProN", meiryo, sans-serif;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    img {
+      vertical-align: bottom;
+    }
+    
+    #container {
+      width: 640px;
+      margin: 32px auto;
+      background: #ddd;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    
+    #inner {
+      width: 620px;
+      margin: auto;
+      background: #eee;
+    }
+    
+    h1 {
+      margin-bottom: 16px;
+    }
+    
+    ul {
+      width: 600px;
+      margin: auto;
+    }
+    
+    li {
+      float: left;
+      width: 25%;
+      text-align: center;
+      line-height: 48px;
+      background: #eee;
+      box-sizing: border-box;
+    }
+    
+    li:not(:last-child) {
+      border-right: 2px solid #ddd;
+    }
+    
+    a {
+      display: block;
+    }
+    
+    a:hover {
+      background: #ccc;
+    }
+    
+    p {
+      width: 600px;
+      padding-bottom: 10px;
+      margin: auto;
+    }
+    
+    li.current {
+      background-color: aquamarine;
+    }
+    
+    .panel {
+      display: none;
+    }
+    
+    .panel.current {
+      display: block;
+    }
+  </style>
+  <script src="../../js/jquery-3.2.1.min.js"></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-96132949-1', 'auto');
+    ga('send', 'pageview');
+
+    $(function() {
+      $("ul li a").on("click", function() {
+        $(this).parent().addClass("current").siblings(".current").removeClass("current");
+
+        var targetTab = $(this).attr("href");
+        $(targetTab).addClass("current").siblings(".current").removeClass("current");
+
+        return false;
+
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <h1>世界を旅する</h1>
+    <div id="inner">
+      <ul>
+        <li class="current"><a href="#travel">どこに行く？</a></li>
+        <li><a href="#cat">猫と旅する</a></li>
+        <li><a href="#dog">犬と旅する</a></li>
+        <li><a href="#passport">パスポート</a></li>
+      </ul>
+
+      <div class="panel current" id="travel">
+        <p><img src="img/q09_01.jpg" alt=""></p>
+      </div>
+
+      <div class="panel" id="cat">
+        <p><img src="img/q09_02.jpg" alt=""></p>
+      </div>
+
+      <div class="panel" id="dog">
+        <p><img src="img/q09_03.jpg" alt=""></p>
+      </div>
+
+      <div class="panel" id="passport">
+        <p><img src="img/q09_04.jpg" alt=""></p>
+      </div>
+    </div>
+    <!-- /#inner -->
+  </div>
+  <!-- /#container -->
+
+</body>
+
+</html>
