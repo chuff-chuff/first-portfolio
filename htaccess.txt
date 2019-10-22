@@ -1,8 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{ENV:HTTPS} !^on$
-RewriteCond %{HTTP:X-Sakura-Forwarded-For} ^$
-RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
-</IfModule>
-
-ErrorDocument 404 /404.html

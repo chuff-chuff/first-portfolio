@@ -1,0 +1,4 @@
+# Redirect default Netlify subdomain to primary domain
+https://possyu-yokohama.netlify.com/* https://possyu.yokohama/:splat 301!
+
+https://possyu.yokohama/index.html https://possyu.yokohama/ 301!
