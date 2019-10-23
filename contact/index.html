@@ -48,15 +48,11 @@
 
     <main>
 
-      <form name="contact" netlify method="POST" action="/contact/thanks.html" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
-        <p class="hidden">
-          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-        </p>
+      <form name="contact" netlify method="POST" action="/contact/thanks.html">
+        <input type="text" name="subject" value="{{名前}}}からお問い合わせがありました {{contact}}" class="hidden">
         <label>お名前<input type="text" name="名前" required></label>
         <label>メールアドレス<input type="email" name="メールアドレス" required></label>
         <label>問い合わせ内容<textarea name="問い合わせ内容" id="" cols="30" rows="10" required></textarea></label>
-        <input type="file" name="添付ファイル" id="">
-        <div data-netlify-recaptcha="true"></div>
         <button type="submit">送信</button>
 
       </form>
