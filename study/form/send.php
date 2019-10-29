@@ -103,7 +103,7 @@ $text = nl2br($text);
 
       <p>お問い合わせが完了しました。<br>2～3日内外で回答を差し上げます。</p>
 
-      <a href="http://possyu.yokohama"><button>トップに戻る</button></a>
+      <a href="http://portfolio.chuff-chuff.dev"><button>トップに戻る</button></a>
     </div>
   </body>
 
