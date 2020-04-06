@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-if(
-  (empty($_SESSION['name']) === true ) ||
-  (empty($_SESSION['mail']) === true ) ||
-  (empty($_SESSION['text']) === true ) 
-){
-  header('location:index.php');
-  exit;
+if (
+  (empty($_SESSION['name']) === true) ||
+  (empty($_SESSION['mail']) === true) ||
+  (empty($_SESSION['text']) === true)
+) {
+    header('location:index.php');
+    exit;
 }
 
 $name = $_SESSION['name'];
@@ -37,10 +37,10 @@ mb_internal_encoding('utf-8');
 
 $result = mb_send_mail($sendAdr, 'お問い合わせメール', $message, $add_header);
 
-if($result === false){
-  echo 'エラーが発生しました。時間を空けて再度送信してください';
-  echo '<a href="index.php>入力ページに戻る</a>';
-  exit;
+if ($result === false) {
+    echo 'エラーが発生しました。時間を空けて再度送信してください';
+    echo '<a href="index.php>入力ページに戻る</a>';
+    exit;
 }
 
 $name = htmlspecialchars($name, ENT_QUOTES, 'utf-8');
@@ -103,7 +103,7 @@ $text = nl2br($text);
 
       <p>お問い合わせが完了しました。<br>2～3日内外で回答を差し上げます。</p>
 
-      <a href="http://portfolio.chuff-chuff.dev"><button>トップに戻る</button></a>
+      <a href="http://ny-portfolio.chuff-chuff.dev"><button>トップに戻る</button></a>
     </div>
   </body>
 
